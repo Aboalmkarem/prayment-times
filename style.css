@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --main: #fff;
+    --main2: cadetblue;
+    --span: coral;
+    --textLight: #fff;
+    --lightWhite: rgba(255,255,255,0.75);
+    --lightWhite2: rgba(228, 228, 228, 0.75);
+    --lightBlack: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: var(--main2);
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1.2rem;
+    text-wrap: balance;
+    gap: 5rem;
+}
+
+header h1 {
+    color: var(--main);
+}
+
+header p {
+    text-shadow: 1px 1px 2px var(--span);
+    font-weight: 700;
+    color: var(--textLight);
+}
+
+header button {
+    font-size: 1.2rem;
+    /* font-weight: 700; */
+    padding: .3rem .7rem;
+    border-radius: .5rem;
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--span);
+    background-color: var(--span);
+    color: var(--textLight);
+    transition: .15s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.07);
+    background-color: var(--lightWhite);
+    color: var(--span);
+}
+
+button:active {
+    transform: scale(.98);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 1.2rem;
+    gap: 7rem;
+    background-color: var(--lightWhite2);
+}
+
+section h2, h3, footer span {
+    box-shadow: 0px 10px 20px var(--lightBlack);
+    background-color: var(--span);
+    color: var(--textLight);
+}
+
+section .cities {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+
+section .cities .city {
+    min-height: 20rem;
+    padding: 2rem;
+    box-shadow: 0px 10px 20px var(--lightBlack);
+    /* color: var(--textLight); */
+    background-color: var(--main);
+}
+
+section .cities .city hr {
+    margin-block: .5rem;
+    border-top: .5px solid var(--span);
+}
+
+section .cities .city .timesCell {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
+
+footer {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--textLight);
+    background-color: var(--main2);
+}
+
+footer span {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
