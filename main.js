@@ -1,4 +1,3 @@
-// const { default: axios } = require("axios");
 
 function getMostSearchedTimes(city) {
     axios.get(`http://api.aladhan.com/v1/timingsByCity?city=${city.id}&country=Egypt&method=5`)
@@ -39,8 +38,19 @@ function getMostSearchedTimes(city) {
         <h4>${timings.Isha}</h4>
         </div>
         `
+    }).catch((error) => {
+        if (error.message == "Network Error") {
+            city.innerHTML += `
+                <img src="images/207492-200.png"></img>
+                <p>Check your network connection</p>
+            `
+        }
     })
 }
 for (city of document.getElementsByClassName("city")) {
     getMostSearchedTimes(city)
 }
+
+// document.getElementById('btn').onclick = () => {
+
+// }
