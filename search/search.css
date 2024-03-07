@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reload {
+    display: flex;
+    font-weight: 900;
+    font-size: 2rem;
+    position: relative;
+}
+
+.reloadDot {
+    position: absolute;
+    animation: reload .7s infinite;
+    animation-duration: calc(7s / var(--i));
+}
+
+/* .reload #dot1 {
+    transform: translate(2px, 1px);
+}
+.reload #dot2 {
+    transform: translate(11px, 4px);
+}
+.reload #dot3 {
+    transform: translate(17px, 11px);
+}
+
+.reload #dot5 {
+    transform: translate(18px, 19px);
+}
+.reload #dot6 {
+    transform: translate(15px, 26px);
+}
+.reload #dot7 {
+    transform: translate(6px, 32px);
+    color: aqua;
+}
+.reload #dot8 {
+    transform: translate(-4px, 30px);
+}
+.reload #dot9 {
+    transform: translate(-12px, 24px);
+}
+.reload #dot10 {
+    transform: translate(-14px, 16px);
+}
+
+.reload #dot4 {
+    transform: translate(-10px, 7px);
+}
+
+ */
+
+@keyframes reload {
+    10% {
+        transform: translate(2px, 1px);
+    }
+    20% {
+        transform: translate(11px, 4px);
+    }
+    30% {
+        transform: translate(17px, 11px);
+    }
+    40% {
+        transform: translate(18px, 19px);
+    }
+    50% {
+        transform: translate(15px, 26px);
+    }
+    60% {
+        transform: translate(6px, 32px);
+    }
+    70% {
+        transform: translate(-4px, 30px);
+    }
+    80% {
+        transform: translate(-12px, 24px);
+    }
+    90% {
+        transform: translate(-14px, 16px);
+    }
+    100% {
+        transform: translate(-10px, 7px);
+    }
+}

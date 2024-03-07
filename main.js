@@ -4,7 +4,7 @@ function getMostSearchedTimes(city) {
     .then((response) => {
         let timings = response.data.data.timings
         // console.log(response)
-        city.innerHTML += `
+        city.innerHTML = `
         <h3>${city.id}</h3>
         <hr>
         <div class="praymentTimes">
@@ -40,7 +40,7 @@ function getMostSearchedTimes(city) {
         `
     }).catch((error) => {
         if (error.message == "Network Error") {
-            city.innerHTML += `
+            city.innerHTML = `
                 <img src="images/207492-200.png"></img>
                 <p>Check your network connection</p>
             `
