@@ -7,27 +7,73 @@
     <link rel="stylesheet" href="search.css">
 </head>
 <body>
-    <h1>search</h1>
-    <div class="selects">
-        <select name="" id="">
-            <option selected disabled>country</option>
-            <option value="egypt">Egypt</option>
-        </select>
-        <select name="" id="">
-            <option selected disabled>city</option>
-            <option value="al-arish">Al-Arish</option>
-        </select>
-    </div>
-    <div class="searchResult">
-    
-    </div>
-    <div class="reload">
-        <span class="reloadDot" id="dot1" style="--i:11">.</span>
-        <span class="reloadDot" id="dot2" style="--i:12">.</span>
-        <span class="reloadDot" id="dot3" style="--i:13">.</span>
-        <span class="reloadDot" id="dot4" style="--i:14">.</span>
-        <span class="reloadDot" id="dot5" style="--i:15">.</span>
-        <span class="reloadDot" id="dot6" style="--i:16">.</span>
-    </div>
+    <header>
+        <h1>search</h1>
+        <div class="selects">
+            <!-- <select name="" id="countrySelect">
+                <option selected disabled>country</option>
+                <option value="egypt">Egypt</option>
+            </select> -->
+            <select name="" id="citySelect">
+                <option selected disabled>city</option>
+                <option value="al-arish">Al-Arish</option>
+                <option value="cairo">cairo</option>
+                <option value="al-zagazig">al-zagazig</option>
+            </select>
+        </div>
+    </header>
+    <section>
+        <div class="resultDiv">
+            <h2>search result</h2>
+            <div class="result" id="result">
+                <div class="cities">
+                    <div class="city">
+                        <div class="reloadContainer">
+                            <div class="reloadCenter">
+                                <div class="loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="reloadContainer">
+                            <div class="reloadCenter">
+                                <div class="loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="reloadContainer">
+                            <div class="reloadCenter">
+                                <div class="loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="reloadContainer">
+                            <div class="reloadCenter">
+                                <div class="loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="reloadContainer">
+                            <div class="reloadCenter">
+                                <div class="loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="reloadContainer">
+                            <div class="reloadCenter">
+                                <div class="loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <script src="search.js"></script>
 </body>
 </html>
