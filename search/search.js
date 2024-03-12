@@ -1,3 +1,32 @@
+let cityOptions = [
+    {
+        name: "Al Arish",
+        value: "al-arish"
+    }
+]
+
+axios.get("eg.json")
+.then((response) => {
+    let data = response.data
+    for (cities of data) {
+        cityOptions.push(
+            {
+                name: `${cities.city}`,
+                value: `${cities.city}`
+            }
+        )
+        console.log(cities.city)
+    }
+    for (city of cityOptions) {
+        citySelect.innerHTML += `
+            <option value="${city.value}">${city.name}</option>
+        `
+    }
+})
+
+
+
+
 function getResult(citySelect, cities) {
     axios.get(`http://api.aladhan.com/v1/timingsByCity?city=${citySelect.value}&country=Egypt&method=5`)
     .then((response) => {
@@ -59,7 +88,7 @@ function getResult(citySelect, cities) {
 
 citySelect.addEventListener('change', () => {
     console.log('hi')
-    let citySelect = document.getElementById('citySelect')
+    // let citySelect = document.getElementById('citySelect')
     let cities = document.getElementsByClassName('cities')
     for (city of cities) {
         city.innerHTML = `
