@@ -8,34 +8,35 @@ function getMostSearchedTimes(city) {
         <h3>${city.id}</h3>
         <hr>
         <div class="praymentTimes">
-        <div class="timesCell">
-        <p>Fajr</p>
-        <h4>${timings.Fajr}</h4>
-        </div>
-        <hr>
-        <div class="timesCell">
-        <p>Sunrise</p>
-        <h4>${timings.Sunrise}</h4>
-        </div>
-        <hr>
-        <div class="timesCell">
-        <p>Dhuhr</p>
-        <h4>${timings.Dhuhr}</h4>
-        </div>
-        <hr>
-        <div class="timesCell">
-        <p>Asr</p>
-        <h4>${timings.Asr}</h4>
-        </div>
-        <hr>
-        <div class="timesCell">
-        <p>Maghrib</p>
-        <h4>${timings.Maghrib}</h4>
-        </div>
-        <hr>
-        <div class="timesCell">
-        <p>Isha</p>
-        <h4>${timings.Isha}</h4>
+            <div class="timesCell">
+                <p>Fajr</p>
+                <h4>${timings.Fajr}</h4>
+            </div>
+            <hr>
+            <div class="timesCell">
+                <p>Sunrise</p>
+                <h4>${timings.Sunrise}</h4>
+            </div>
+            <hr>
+            <div class="timesCell">
+                <p>Dhuhr</p>
+                <h4>${timings.Dhuhr}</h4>
+            </div>
+            <hr>
+            <div class="timesCell">
+                <p>Asr</p>
+                <h4>${timings.Asr}</h4>
+            </div>
+            <hr>
+            <div class="timesCell">
+                <p>Maghrib</p>
+                <h4>${timings.Maghrib}</h4>
+            </div>
+            <hr>
+            <div class="timesCell">
+                <p>Isha</p>
+                <h4>${timings.Isha}</h4>
+            </div>
         </div>
         `
     }).catch((error) => {
@@ -50,7 +51,3 @@ function getMostSearchedTimes(city) {
 for (city of document.getElementsByClassName("city")) {
     getMostSearchedTimes(city)
 }
-
-// document.getElementById('btn').onclick = () => {
-
-// }

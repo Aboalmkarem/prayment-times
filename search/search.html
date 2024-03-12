@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search</title>
     <link rel="stylesheet" href="search.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
+    <a href="../index.html"><button>back</button></a>
     <header>
         <h1>search</h1>
         <div class="selects">
@@ -22,58 +24,12 @@
             </select>
         </div>
     </header>
-    <section>
-        <div class="resultDiv">
-            <h2>search result</h2>
-            <div class="result" id="result">
-                <div class="cities">
-                    <div class="city">
-                        <div class="reloadContainer">
-                            <div class="reloadCenter">
-                                <div class="loader"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="city">
-                        <div class="reloadContainer">
-                            <div class="reloadCenter">
-                                <div class="loader"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="city">
-                        <div class="reloadContainer">
-                            <div class="reloadCenter">
-                                <div class="loader"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="city">
-                        <div class="reloadContainer">
-                            <div class="reloadCenter">
-                                <div class="loader"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="city">
-                        <div class="reloadContainer">
-                            <div class="reloadCenter">
-                                <div class="loader"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="city">
-                        <div class="reloadContainer">
-                            <div class="reloadCenter">
-                                <div class="loader"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="resultDiv">
+        <h2>search result</h2>
+        <div class="result" id="result">
+            <div class="cities"></div>
         </div>
-    </section>
-        
+    </div>
     <script src="search.js"></script>
 </body>
 </html>

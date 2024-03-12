@@ -18,9 +18,32 @@
 body {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     padding-bottom: 2rem;
+    text-align: center;
+    background-color: var(--lightWhite2);
+}
+
+button {
+    position: absolute;
+    top: 10rem;
+    left: -1rem;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: .5rem 1rem .5rem 2rem;
+    border: 1px solid var(--span);
+    background-color: var(--span);
+    color: var(--lightWhite);
+    box-shadow: 0px 10px 20px var(--lightBlack);
+    cursor: pointer;
+}
+
+h3 {
+    box-shadow: 0px 10px 20px var(--lightBlack);
+    background-color: var(--span);
+    color: var(--textLight);
 }
 
 header {
@@ -29,7 +52,8 @@ header {
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
+    min-width: 30%;
 }
 
 header h1 {
@@ -38,40 +62,59 @@ header h1 {
 }
 
 .resultDiv {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 55%;
     min-height: 100%;
-    margin-inline: auto;
+    padding-top: 2rem;
 }
 
 .resultDiv h2 {
-    padding: .5rem 0 1.5rem 1.7rem;
+    padding: .7rem 0 1.5rem;
 }
 
-section .cities {
-    display: grid;
+.resultDiv .result {
+    width: 95%;
+}
+
+.resultDiv .cities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 1rem;
 }
 
-section .cities .city {
+.resultDiv .cities .city {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 20rem;
     min-height: 20rem;
     padding: 2rem;
     box-shadow: 0px 10px 20px var(--lightBlack);
-    /* color: var(--textLight); */
     background-color: var(--main);
 }
 
-section .cities .city hr {
+.resultDiv .cities .city hr {
     margin-block: .5rem;
     border-top: .5px solid var(--span);
 }
 
-section .cities .city .timesCell {
+.resultDiv .cities .city .timesCell {
     display: flex;
     justify-content: space-between;
     padding-inline: 2rem;
+}
+
+.resultDiv .cities .city img {
+    width: 12rem;
+    margin-inline: auto;
 }
 
 .reloadContainer {
